@@ -4,6 +4,14 @@
   padding: 2rem;
   text-align: center;
 }
+.menu-dd {
+display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  padding: 2rem;
+  background-color: #213547;
+margin-top: 1rem;
+}
 
 .logo {
   height: 6em;

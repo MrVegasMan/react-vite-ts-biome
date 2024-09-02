@@ -2,6 +2,7 @@ import { useState } from "react";
 import reactLogo from "./assets/react.svg";
 import viteLogo from "/vite.svg";
 import "./App.css";
+import { Menu, MenuButton, MenuItem, MenuItems } from "@headlessui/react";
 
 function App() {
   const [count, setCount] = useState(0);
@@ -31,6 +32,27 @@ function App() {
       <p className="read-the-docs">
         Click on the Vite and React logos to learn more
       </p>
+
+      <Menu>
+        <MenuButton>My account</MenuButton>
+        <MenuItems anchor="bottom" className={"menu-dd"}>
+          <MenuItem>
+            <a className="block data-[focus]:bg-blue-100" href="/settings">
+              Settings
+            </a>
+          </MenuItem>
+          <MenuItem>
+            <a className="block data-[focus]:bg-blue-100" href="/support">
+              Support
+            </a>
+          </MenuItem>
+          <MenuItem>
+            <a className="block data-[focus]:bg-blue-100" href="/license">
+              License
+            </a>
+          </MenuItem>
+        </MenuItems>
+      </Menu>
     </>
   );
 }
