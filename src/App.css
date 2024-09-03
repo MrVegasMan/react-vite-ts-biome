@@ -13,6 +13,13 @@ display: flex;
 margin-top: 1rem;
 }
 
+.flex {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 40px;
+}
+
 .logo {
   height: 6em;
   padding: 1.5em;

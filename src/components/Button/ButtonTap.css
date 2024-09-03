@@ -1,0 +1,19 @@
+.tap-btn {
+    background-color: #FF5387;
+    aspect-ratio: 1;
+    width: 100%;
+    margin: 40px;
+    border-radius: 50%;
+    border: 8px solid #111014;
+    outline: 4px solid #111014;
+    outline-offset: -8px;
+    background-image: url("/src/assets/images/iq_face.png");
+    background-position: 50% 50%;
+    background-repeat: no-repeat;
+    background-size: 110%;
+    transition: background-size ease-in-out .025s;
+    &:active {
+        border: 8px solid #FF5387;
+        background-size: 105%;
+    }
+}

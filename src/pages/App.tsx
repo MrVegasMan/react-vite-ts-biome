@@ -1,12 +1,13 @@
 import { useState } from "react";
-import reactLogo from "./assets/react.svg";
+import reactLogo from "../assets/react.svg";
 import viteLogo from "/vite.svg";
-import "./App.css";
+import "../App.css";
 import { Menu, MenuButton, MenuItem, MenuItems } from "@headlessui/react";
+import { ButtonTap } from "../components/Button/ButtonTap.tsx";
 
 function App() {
   const [count, setCount] = useState(0);
-
+  const [countTap, setCountTap] = useState(0);
   return (
     <>
       <div>
@@ -22,6 +23,7 @@ function App() {
       </div>
       <h1>Vite + React</h1>
       <div className="card">
+        <h2>{countTap}</h2>
         <button onClick={() => setCount((count) => count + 1)}>
           count is {count}
         </button>
@@ -32,27 +34,29 @@ function App() {
       <p className="read-the-docs">
         Click on the Vite and React logos to learn more
       </p>
-
-      <Menu>
-        <MenuButton>My account</MenuButton>
-        <MenuItems anchor="bottom" className={"menu-dd"}>
-          <MenuItem>
-            <a className="block data-[focus]:bg-blue-100" href="/settings">
-              Settings
-            </a>
-          </MenuItem>
-          <MenuItem>
-            <a className="block data-[focus]:bg-blue-100" href="/support">
-              Support
-            </a>
-          </MenuItem>
-          <MenuItem>
-            <a className="block data-[focus]:bg-blue-100" href="/license">
-              License
-            </a>
-          </MenuItem>
-        </MenuItems>
-      </Menu>
+      <div className="flex">
+        <Menu>
+          <MenuButton>My account</MenuButton>
+          <MenuItems anchor="bottom" className={"menu-dd"}>
+            <MenuItem>
+              <a className="block data-[focus]:bg-blue-100" href="/settings">
+                Settings
+              </a>
+            </MenuItem>
+            <MenuItem>
+              <a className="block data-[focus]:bg-blue-100" href="/support">
+                Support
+              </a>
+            </MenuItem>
+            <MenuItem>
+              <a className="block data-[focus]:bg-blue-100" href="/license">
+                License
+              </a>
+            </MenuItem>
+          </MenuItems>
+        </Menu>
+        <ButtonTap onClick={() => setCountTap((count) => count + 1)} />
+      </div>
     </>
   );
 }
