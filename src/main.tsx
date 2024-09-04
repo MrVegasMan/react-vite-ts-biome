@@ -1,7 +1,9 @@
 import { StrictMode } from "react";
 import { createRoot } from "react-dom/client";
 import App from "./pages/App.tsx";
+import "./styles/reset.scss";
 import "./styles/index.scss";
+import "./styles/mods.scss";
 import { AppHeader } from "./components/AppHeader/AppHeader.tsx";
 import { AppFooter } from "./components/AppFooter/AppFooter.tsx";
 

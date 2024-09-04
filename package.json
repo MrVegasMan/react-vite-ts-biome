@@ -5,9 +5,16 @@
 	"type": "module",
 	"scripts": {
 		"dev": "vite",
-		"build": "tsc -b && vite build",
+		"build": "npm-run-all build:*",
 		"lint": "eslint .",
-		"preview": "vite preview"
+		"preview": "vite preview",
+		"build:css": "node-sass src/ -o src/",
+		"watch:css": "npm run build:css && node-sass src/ -o src/ -w -r",
+		"start:js": "react-scripts-ts start",
+		"start": "npm-run-all -p watch:css start:js",
+		"build:js": "react-scripts-ts build",
+		"test": "react-scripts-ts test --env=jsdom",
+		"eject": "react-scripts-ts eject"
 	},
 	"dependencies": {
 		"@headlessui/react": "^2.1.3",
