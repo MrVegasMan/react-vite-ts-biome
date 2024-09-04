@@ -1,5 +1,5 @@
 import { Button } from "@headlessui/react";
-import "./ButtonTap.css";
+import "./ButtonTap.scss";
 
 interface ButtonTapProps {
   onClick?: () => void;

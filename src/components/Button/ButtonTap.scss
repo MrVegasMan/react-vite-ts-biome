@@ -1,0 +1,19 @@
+.tap-btn {
+    background-color: #FF5387;
+    aspect-ratio: 1;
+    width: 100%;
+    margin: 50px;
+    border-radius: 50%;
+    border: 4vw solid #161519;
+    outline: 2vw solid #111014;
+    outline-offset: -4vw;
+    background-image: url("/src/assets/images/wojak.svg");
+    background-position: 50% 50%;
+    background-repeat: no-repeat;
+    background-size: 110%;
+    transition: all ease-in-out .025s;
+    &:active {
+        border: 4vw solid #FF5387;
+        background-size: 105%;
+    }
+}
