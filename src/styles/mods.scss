@@ -1,3 +1,27 @@
+/* ----------------------- Локальные моды ------------------------------ */
+
+.bg-transparent {
+  background-color: transparent;
+}
+
+.bg-brand-high {
+  background-color: $color-brand-high;
+}
+
+/* ----------------------- gap ------------------------------ */
+
+.gap-4px {
+  gap: 4px;
+}
+/* ----------------------- Position ------------------------------ */
+
+.relative {
+  position: relative;
+}
+
+.absolute {
+  position: absolute;
+}
 /* ----------------------- flex ------------------------------ */
 
 .flex {
@@ -92,4 +116,167 @@
 
 .justify-stretch {
   justify-content: stretch;
+}
+
+/* ----------------------- grow ------------------------------ */
+
+.grow {
+  flex-grow: 1;
+}
+
+.grow-0 {
+  flex-grow: 0;
+}
+
+/* ----------------------- background-position ------------------------------ */
+
+.bg-bottom {
+  background-position: bottom;
+}
+
+.bg-center {
+  background-position: center;
+}
+
+.bg-left {
+  background-position: left;
+}
+
+.bg-left-bottom {
+  background-position: left bottom;
+}
+
+.bg-left-top {
+  background-position: left top;
+}
+
+.bg-right {
+  background-position: right;
+}
+
+.bg-right-bottom {
+  background-position: right bottom;
+}
+
+.bg-right-top {
+  background-position: right top;
+}
+
+.bg-top {
+  background-position: top;
+}
+
+
+/* ----------------------- background-repeat ------------------------------ */
+
+.bg-repeat {
+  background-repeat: repeat;
+}
+
+.bg-no-repeat {
+  background-repeat: no-repeat;
+}
+
+.bg-repeat-x {
+  background-repeat: repeat-x;
+}
+
+.bg-repeat-y {
+  background-repeat: repeat-y;
+}
+
+.bg-repeat-round {
+  background-repeat: round;
+}
+
+.bg-repeat-space {
+  background-repeat: space;
+}
+
+
+/* ----------------------- Background Size ------------------------------ */
+
+.bg-auto {
+  background-size: auto;
+}
+
+.bg-cover {
+  background-size: cover;
+}
+
+.bg-contain {
+  background-size: contain;
+}
+
+
+/* ----------------------- Border Radius ------------------------------ */
+
+.rounded-full {
+  border-radius: 9999px;
+}
+
+.rounded-none {
+  border-radius: 0px;
+}
+
+/* ----------------------- Overflow ------------------------------ */
+
+.overflow-auto {
+  overflow: auto;
+}
+
+.overflow-hidden {
+  overflow: hidden;
+}
+
+.overflow-clip {
+  overflow: clip;
+}
+
+.overflow-visible {
+  overflow: visible;
+}
+
+.overflow-scroll {
+  overflow: scroll;
+}
+
+.overflow-x-auto {
+  overflow-x: auto;
+}
+
+.overflow-y-auto {
+  overflow-y: auto;
+}
+
+.overflow-x-hidden {
+  overflow-x: hidden;
+}
+
+.overflow-y-hidden {
+  overflow-y: hidden;
+}
+
+.overflow-x-clip {
+  overflow-x: clip;
+}
+
+.overflow-y-clip {
+  overflow-y: clip;
+}
+
+.overflow-x-visible {
+  overflow-x: visible;
+}
+
+.overflow-y-visible {
+  overflow-y: visible;
+}
+
+.overflow-x-scroll {
+  overflow-x: scroll;
+}
+
+.overflow-y-scroll {
+  overflow-y: scroll;
 }
