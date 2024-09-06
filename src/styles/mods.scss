@@ -8,10 +8,111 @@
   background-color: $color-brand-high;
 }
 
+.bg-layer-floor-1 {
+  background-color: $color-layer-floor-1;
+}
+
+.bg-positive-high {
+  background-color: $color-positive-high;
+}
+
+
+
+/* ----------------------- Text Color ------------------------------ */
+.text-inherit {
+  color: inherit;
+}
+
+.text-current {
+  color: currentColor;
+}
+
+.text-transparent {
+  color: transparent;
+}
+
+.text-content-static-dark-primary {
+  color: $color-content-static-dark-primary;
+}
+
+/* ----------------------- Grid ------------------------------ */
+
+.grid {
+  display: grid;
+}
+
+//Grid Template Columns
+.grid-cols-1 {
+  grid-template-columns: repeat(1, minmax(0, 1fr));
+}
+
+.grid-cols-2 {
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+}
+
+.grid-cols-3 {
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+}
+
+.grid-cols-4 {
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+}
+
+.grid-cols-5 {
+  grid-template-columns: repeat(5, minmax(0, 1fr));
+}
+/* ----------------------- Padding ------------------------------ */
+
+.p-1 {
+  padding: 1px;
+}
+
+.p-4 {
+  padding: 4px;
+}
+
+.p-8 {
+  padding: 8px;
+}
+
+// vertical
+
+.px-8 {
+  padding-left: 8px;
+  padding-right: 8px;
+}
+
+.px-10 {
+  padding-left: 10px;
+  padding-right: 10px;
+}
+
+.px-12 {
+  padding-left: 12px;
+  padding-right: 12px;
+}
+
+//horizontal
+
+.py-5 {
+  padding-top: 5px;
+  padding-bottom: 5px;
+}
+
+.py-8 {
+  padding-top: 8px;
+  padding-bottom: 8px;
+}
+
+
 /* ----------------------- gap ------------------------------ */
 
 .gap-4px {
   gap: 4px;
+}
+
+.gap-8px {
+  gap: 8px;
 }
 /* ----------------------- Position ------------------------------ */
 
@@ -44,6 +145,32 @@
   flex-direction: column-reverse;
 }
 
+/* ----------------------- Align Self ------------------------------ */
+.self-auto {
+  align-self: auto;
+}
+
+.self-start {
+  align-self: flex-start;
+}
+
+.self-end {
+  align-self: flex-end;
+}
+
+.self-center {
+  align-self: center;
+}
+
+.self-stretch {
+  align-self: stretch;
+}
+
+.self-baseline {
+  align-self: baseline;
+}
+
+
 /* ----------------------- align-items ------------------------------ */
 
 .items-start {
@@ -65,6 +192,29 @@
 .items-stretch {
   align-items: stretch;
 }
+
+/* ----------------------- Justify Self ------------------------------ */
+
+.justify-self-auto {
+  justify-self: auto;
+}
+
+.justify-self-start {
+  justify-self: start;
+}
+
+.justify-self-end {
+  justify-self: end;
+}
+
+.justify-self-center {
+  justify-self: center;
+}
+
+.justify-self-stretch {
+  justify-self: stretch;
+}
+
 
 /* ----------------------- justify-items ------------------------------ */
 
@@ -219,6 +369,10 @@
   border-radius: 0px;
 }
 
+.rounded-8 {
+  border-radius: 8px;
+}
+
 /* ----------------------- Overflow ------------------------------ */
 
 .overflow-auto {
@@ -279,4 +433,27 @@
 
 .overflow-y-scroll {
   overflow-y: scroll;
+}
+
+
+/* ----------------------- Size ------------------------------ */
+
+.size-full {
+  width: 100%;
+  height: 100%;
+}
+
+.size-min {
+  width: min-content;
+  height: min-content;
+}
+
+.size-max {
+  width: max-content;
+  height: max-content;
+}
+
+.size-fit {
+  width: fit-content;
+  height: fit-content;
 }

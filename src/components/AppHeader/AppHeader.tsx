@@ -9,14 +9,14 @@ import {
 
 export function AppHeader() {
   return (
-    <div className={"app-header flex flex-row justify-between"}>
-      <Button>Close</Button>
+    <div className={"app-header grid grid-cols-3 bg-layer-floor-1 px-12 py-8"}>
+      <Button className={"title justify-self-start"}>Close</Button>
       <div className={"flex flex-col"}>
-        <h1>Brain Genius</h1>
-        <p>bot</p>
+        <h1 className={"title"}>Brain Genius</h1>
+        <p className={"subtitle"}>bot</p>
       </div>
       <Menu>
-        <MenuButton>My account</MenuButton>
+        <MenuButton className={"justify-self-end"}>---</MenuButton>
         <MenuItems anchor="bottom" className={"menu-dd"}>
           <MenuItem>
             <a className="block data-[focus]:bg-blue-100" href="/settings">

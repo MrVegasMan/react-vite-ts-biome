@@ -13,7 +13,7 @@ export function ButtonFooter({ children, footerBtnTitle }: ButtonFooterProps) {
       className={"app-footer-btn flex flex-col gap-4px items-center grow"}
     >
       {children}
-      <p>{footerBtnTitle}</p>
+      <p className={"compact-200-accent"}>{footerBtnTitle}</p>
     </Button>
   );
 }

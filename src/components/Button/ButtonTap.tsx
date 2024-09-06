@@ -39,13 +39,8 @@ interface PopEvent extends MouseEvent {
 }
 
 function pop(e: PopEvent): void {
-  let amount = 30;
-  switch (e.target.dataset.type) {
-    case "shadow":
-    case "line":
-      amount = 60;
-      break;
-  }
+  const amount = 15;
+
   const { clientX, clientY, target } = e;
   if (clientX === 0 && clientY === 0) {
     const bbox = target.getBoundingClientRect();
@@ -64,6 +59,7 @@ function pop(e: PopEvent): void {
 function createParticle(x: number, y: number, type?: string): void {
   const particle = document.createElement("particle");
   document.body.appendChild(particle);
+
   const width = Math.floor(Math.random() * 130 + 8);
   const height = Math.floor(Math.random() * 130 + 8);
   const destinationX = (Math.random() - 0.5) * 600;
@@ -73,12 +69,13 @@ function createParticle(x: number, y: number, type?: string): void {
 
   switch (type) {
     case "logo":
-      particle.style.backgroundImage = "url(src/assets/images/wojak.svg)";
+      particle.style.backgroundImage = "url(src/assets/images/brain.png)";
       break;
   }
 
   particle.style.width = `${width}px`;
   particle.style.height = `${height}px`;
+
   const animation = particle.animate(
     [
       {
@@ -87,19 +84,25 @@ function createParticle(x: number, y: number, type?: string): void {
       },
       {
         transform: `translate(-50%, -50%) translate(${x + destinationX}px, ${y + destinationY}px) rotate(${rotation}deg)`,
+        opacity: 1,
+      },
+      {
+        transform: `translate(-50%, -50%) translate(${x + destinationX}px, ${y + destinationY}px) rotate(${rotation}deg)`,
         opacity: 0,
       },
     ],
     {
-      duration: Math.random() * 100 + 2000,
+      duration: Math.random() * 100 + 3500,
       easing: "cubic-bezier(0, .9, .57, 1)",
       delay: delay,
     },
   );
-  animation.onfinish = removeParticle;
+
+  animation.onfinish = () => removeParticle(particle);
 }
 
-function removeParticle(e: AnimationPlaybackEvent): void {
-  const target = e.srcElement as HTMLElement;
-  target.remove();
+function removeParticle(particle: HTMLElement): void {
+  if (particle instanceof HTMLElement) {
+    particle.remove();
+  }
 }
