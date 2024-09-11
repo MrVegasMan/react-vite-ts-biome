@@ -35,6 +35,9 @@
   color: $color-content-static-dark-primary;
 }
 
+.text-positive-primary {
+  color: $color-positive-primary;
+}
 /* ----------------------- Grid ------------------------------ */
 
 .grid {
@@ -366,7 +369,7 @@
 }
 
 .rounded-none {
-  border-radius: 0px;
+  border-radius: 0;
 }
 
 .rounded-8 {
